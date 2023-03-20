@@ -1,4 +1,26 @@
 ﻿<Properties StartupConfiguration="{AE1F6559-ADB0-4DE1-8A14-80E9632E9225}|Default">
-  <MonoDevelop.Ide.ItemProperties.MusicMazter FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MusicMazter FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="MusicMazter/Bank.cs">
+    <Files>
+      <File FileName="MusicMazter/Program.cs" Line="1" Column="1" />
+      <File FileName="MusicMazter/Bank.cs" Line="17" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MusicMazter" expanded="True">
+            <Node name="MusicMazter">
+              <Node name="Bank.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
