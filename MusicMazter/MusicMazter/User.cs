@@ -13,4 +13,16 @@ public class User
         Balance = balance;
 
     }
+
+    public double showUserBalance()
+    {
+        return this.Balance;
+
+    }
+
+    public void updateUserBalance(int price) {
+
+        this.Balance -= price;
+
+    }
 }

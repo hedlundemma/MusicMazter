@@ -4,17 +4,19 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="MusicMazter/Bank.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MusicMazter/Program.cs">
     <Files>
-      <File FileName="MusicMazter/Program.cs" Line="1" Column="1" />
-      <File FileName="MusicMazter/Bank.cs" Line="17" Column="1" />
+      <File FileName="MusicMazter/Program.cs" Line="4" Column="1" />
+      <File FileName="MusicMazter/Bank.cs" Line="15" Column="2" />
+      <File FileName="MusicMazter/Inventory.cs" />
+      <File FileName="MusicMazter/VendingMachine.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="MusicMazter" expanded="True">
+          <Node name="MusicMazter">
             <Node name="MusicMazter">
-              <Node name="Bank.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>

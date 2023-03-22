@@ -1,0 +1,15 @@
+/Users/emmahedlund/Documents/GitHub/MusicMazter/MusicMazter/MusicMazter/bin/Debug/net7.0/MusicMazter
+/Users/emmahedlund/Documents/GitHub/MusicMazter/MusicMazter/MusicMazter/bin/Debug/net7.0/MusicMazter.deps.json
+/Users/emmahedlund/Documents/GitHub/MusicMazter/MusicMazter/MusicMazter/bin/Debug/net7.0/MusicMazter.runtimeconfig.json
+/Users/emmahedlund/Documents/GitHub/MusicMazter/MusicMazter/MusicMazter/bin/Debug/net7.0/MusicMazter.dll
+/Users/emmahedlund/Documents/GitHub/MusicMazter/MusicMazter/MusicMazter/bin/Debug/net7.0/MusicMazter.pdb
+/Users/emmahedlund/Documents/GitHub/MusicMazter/MusicMazter/MusicMazter/obj/Debug/net7.0/MusicMazter.csproj.AssemblyReference.cache
+/Users/emmahedlund/Documents/GitHub/MusicMazter/MusicMazter/MusicMazter/obj/Debug/net7.0/MusicMazter.GeneratedMSBuildEditorConfig.editorconfig
+/Users/emmahedlund/Documents/GitHub/MusicMazter/MusicMazter/MusicMazter/obj/Debug/net7.0/MusicMazter.AssemblyInfoInputs.cache
+/Users/emmahedlund/Documents/GitHub/MusicMazter/MusicMazter/MusicMazter/obj/Debug/net7.0/MusicMazter.AssemblyInfo.cs
+/Users/emmahedlund/Documents/GitHub/MusicMazter/MusicMazter/MusicMazter/obj/Debug/net7.0/MusicMazter.csproj.CoreCompileInputs.cache
+/Users/emmahedlund/Documents/GitHub/MusicMazter/MusicMazter/MusicMazter/obj/Debug/net7.0/MusicMazter.dll
+/Users/emmahedlund/Documents/GitHub/MusicMazter/MusicMazter/MusicMazter/obj/Debug/net7.0/refint/MusicMazter.dll
+/Users/emmahedlund/Documents/GitHub/MusicMazter/MusicMazter/MusicMazter/obj/Debug/net7.0/MusicMazter.pdb
+/Users/emmahedlund/Documents/GitHub/MusicMazter/MusicMazter/MusicMazter/obj/Debug/net7.0/MusicMazter.genruntimeconfig.cache
+/Users/emmahedlund/Documents/GitHub/MusicMazter/MusicMazter/MusicMazter/obj/Debug/net7.0/ref/MusicMazter.dll
