@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using MusicMazter;
 
 namespace MusicMazter
@@ -12,7 +13,7 @@ namespace MusicMazter
             "purchase instrument",
             "check balance",
             "inventory",
-            "exit"
+
         };
 
         public List<Inventory> GetInventories { get; } = new List<Inventory>
@@ -34,11 +35,36 @@ namespace MusicMazter
             Console.ForegroundColor = ConsoleColor.Blue;
 
             Console.WriteLine("____________MENU__________");
-            foreach (var menuOptions in Menu)
+            foreach (var MenuOptions in Menu)
             {
-                Console.WriteLine(menuOptions);
+                Console.WriteLine(MenuOptions);
             }
             Console.WriteLine("___________________________");
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Chose an option from the menu to get started");
+            var input = Console.ReadLine();
+
+
+
+
+            if (input == "purchase instrument")
+            {
+                // lägg  till vad som händer med en funktion
+            }
+            else if (input == "check balance")
+            {
+                // lägg till vad som händer med en funktion
+            }
+            else if (input == "inventory")
+            {
+                //lägg till vad som händer med en funktion
+            }
+
+
+
+
+
 
 
 
@@ -47,6 +73,5 @@ namespace MusicMazter
         }
 
     }
-
 }
 
