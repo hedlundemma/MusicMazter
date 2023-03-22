@@ -20,6 +20,6 @@ var shopper= new User(answer, 200);
 
 vendingMachine.StartVendingMachine(shopper);
 
-Console.ReadKey();
+
 
 

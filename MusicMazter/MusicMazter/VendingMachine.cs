@@ -7,15 +7,6 @@ namespace MusicMazter
     public class VendingMachine
     {
 
-
-        public List<string> Menu { get; } = new List<string>
-        {
-            "purchase instrument",
-            "check balance",
-            "inventory",
-
-        };
-
         public List<Inventory> GetInventories { get; } = new List<Inventory>
         {
             new Inventory ("Guitar", 40, 3),
@@ -27,11 +18,22 @@ namespace MusicMazter
 
         };
 
+        public List<string> Menu { get; } = new List<string>
+        {
+            "purchase instrument",
+            "check balance",
+            "inventory"
+
+        };
+
+       
+
         public void StartVendingMachine(User shopper)
 
         {
-
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine($"Welcome {shopper.Name}");
+            Console.ResetColor();
             Console.ForegroundColor = ConsoleColor.Blue;
 
             Console.WriteLine("____________MENU__________");
@@ -42,36 +44,86 @@ namespace MusicMazter
             Console.WriteLine("___________________________");
 
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Chose an option from the menu to get started");
-            var input = Console.ReadLine();
+
+            string input;
 
 
-
-
-            if (input == "purchase instrument")
+            do
             {
-                // lägg  till vad som händer med en funktion
+                input = ShowMenu();
+
+
+                if (input == "purchase instrument")
+                {
+                    // lägg  till vad som händer med en funktion
+                }
+                else if (input == "check balance")
+                {
+                    ShowBalance(shopper);
+                }
+                else if (input == "inventory")
+
+                {
+                    DisplayInventory();
+
+
+                }
             }
-            else if (input == "check balance")
+            while (input != null);
+            
+        }
+
+        public string ShowMenu()
+        {
+
+            while (true)
             {
-                // lägg till vad som händer med en funktion
+                Console.ForegroundColor = ConsoleColor.DarkBlue;
+                Console.WriteLine("Choose a option from the menu above");
+                Console.ResetColor();
+
+                var input = Console.ReadLine();
+
+                if (input != null)
+                {
+                    
+                    return input;
+                }
             }
-            else if (input == "inventory")
+        }
+
+        // visa hur mycket pengar personen har på sitt konto 
+        public void ShowBalance(User shopper)
+        {
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine($"{shopper.Name} currently have: ${shopper.showUserBalance()}");
+            Console.WriteLine("________________________________________");
+            Console.ResetColor();
+        }
+
+
+        // visa inventory 
+        public void DisplayInventory()
+        {
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("Heres our instruments thats currently for sale:");
+            Console.ResetColor();
+            foreach (var instrument in GetInventories)
             {
-                //lägg till vad som händer med en funktion
+                if (instrument.Quantity != 0)
+                {
+                    Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine($"{instrument.Name}, quantity: {instrument.Quantity}, cost: {instrument.Price}");
+                    Console.ResetColor();
+                }
             }
-
-
-
-
-
-
-
+            Console.WriteLine("__________________________________");
 
 
 
         }
-
     }
 }
 
