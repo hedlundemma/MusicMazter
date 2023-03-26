@@ -5,24 +5,29 @@ public class User
 {
 
     public string Name { get; set; }
-    public double Balance { get; set; }
+    public int Balance { get; set; }
 
-    public User(string name, double balance)
+    public List<string> boughtItems;
+
+
+    public User(string name, int balance)
     {
         Name = name;
         Balance = balance;
+        boughtItems= new List<string>();
+
 
     }
 
-    public double showUserBalance()
+    public int showUserBalance()
     {
         return this.Balance;
 
     }
 
-    public void updateUserBalance(int price) {
+    public int updateUserBalance(int price) {
 
-        this.Balance -= price;
+       return this.Balance -= price;
 
     }
 }

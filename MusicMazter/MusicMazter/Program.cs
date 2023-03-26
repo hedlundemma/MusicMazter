@@ -16,7 +16,7 @@ while (answer == null || answer == "")
 
 }
 
-var shopper= new User(answer, 200);
+var shopper = new User(answer, 200);
 
 vendingMachine.StartVendingMachine(shopper);
 
