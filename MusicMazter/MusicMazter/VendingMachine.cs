@@ -62,10 +62,6 @@ namespace MusicMazter
                     MakePurchase(shopper);
                  
                 }
-
-
-
-
                 else if (input == "check balance")
                 {
                     ShowBalance(shopper);
@@ -188,39 +184,50 @@ namespace MusicMazter
                 {
 
                     choosenInstrument = instrument;
+
                   
                 }
+               
 
-                if (choosenInstrument != null) {
-                
-              
-                if (choosenInstrument.Price > shopper.Balance)
+
+                if (choosenInstrument != null)
+                {
+
+                    if (choosenInstrument.Price >= shopper.Balance)
                        
                     {
+
                         Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"Sorry {shopper.Name}, you dont have enough money");
+                        Console.WriteLine($"Sorry {shopper.Name}, you dont have enough money");
+                    }
                    
-                }
+                    if (choosenInstrument.Quantity != 0) { 
+
+
+
                     Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine($"You selected {choice} for {choosenInstrument.Price} dollar");
-                    Console.WriteLine("________________________________________");
-                    Console.ResetColor();
+                        Console.WriteLine($"You selected {choice} for {choosenInstrument.Price} dollar");
+                        Console.WriteLine("________________________________________");
+                        Console.ResetColor();
 
-                    shopper.updateUserBalance(choosenInstrument.Price);
-                    shopper.boughtItems.Add(choosenInstrument.Name);
+                        shopper.updateUserBalance(choosenInstrument.Price);
+                        shopper.boughtItems.Add(choosenInstrument.Name);
 
-                    AdjustInventory(choice);
+                        AdjustInventory(choice);
 
+                        return;
+                    }
 
-
-                    return;
 
                 }
-                
+
+               
+
 
             }
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"Oppsie, we dont hace {choice}");
+
         }
     }
 }
