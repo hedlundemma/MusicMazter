@@ -1,28 +1,26 @@
 ﻿<Properties StartupConfiguration="{AE1F6559-ADB0-4DE1-8A14-80E9632E9225}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.MusicMazter PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MusicMazter/VendingMachine.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MusicMazter/Inventory.cs">
     <Files>
-      <File FileName="MusicMazter/Program.cs" Line="19" Column="37" />
-      <File FileName="MusicMazter/Inventory.cs" Line="13" Column="27" />
-      <File FileName="MusicMazter/User.cs" Line="10" Column="36" />
-      <File FileName="MusicMazter/VendingMachine.cs" Line="30" Column="1" />
+      <File FileName="MusicMazter/Program.cs" Line="20" Column="45" />
+      <File FileName="MusicMazter/Inventory.cs" Line="18" Column="1" />
+      <File FileName="MusicMazter/User.cs" Line="15" Column="42" />
+      <File FileName="MusicMazter/VendingMachine.cs" Line="208" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="MusicMazter">
-            <Node name="MusicMazter">
-              <Node name="VendingMachine.cs" selected="True" />
-            </Node>
+          <Node name="MusicMazter" expanded="True">
+            <Node name="MusicMazter" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.MusicMazter PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

@@ -16,7 +16,6 @@ namespace MusicMazter
             new Inventory ("Bass", 49, 3),
             new Inventory ("Maracas", 10, 4),
             new Inventory ("Tamburine", 25, 6)
-
         };
 
         public List<string> Menu { get; } = new List<string>
@@ -112,7 +111,7 @@ namespace MusicMazter
             foreach (var instrument in GetInventories)
             {
                 int newInventory = instrument.Quantity - 1;
-                if (choice == instrument.Name)
+                if (choice == instrument.Name || choice == instrument.Name.ToLower())
                 {
                     instrument.Quantity = newInventory;
                 }
@@ -166,12 +165,12 @@ namespace MusicMazter
             DisplayInventory();
             Console.WriteLine("\nPlease write the name of the instrument you would like to buy.");
 
-            var choice = Console.ReadLine().ToLower();
+            var choice = Console.ReadLine();
 
             Inventory choosenInstrument = null;
             foreach (var instrument in GetInventories)
             {
-                if (instrument.Name.ToLower() == choice)
+                if (instrument.Name == choice || instrument.Name.ToLower() == choice)
                 {
                     choosenInstrument = instrument;
                 }
@@ -206,3 +205,5 @@ namespace MusicMazter
         }
     }
 }
+message.txt
+7 KB
