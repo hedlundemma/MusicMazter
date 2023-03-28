@@ -8,8 +8,7 @@ namespace MusicMazter
 {
     public class VendingMachine
     {
-
-        public List<Inventory> GetInventories { get;  } = new List<Inventory>
+        public List<Inventory> GetInventories { get; } = new List<Inventory>
         {
             new Inventory ("Guitar", 40, 3),
             new Inventory ("Drums", 50, 1),
@@ -25,14 +24,12 @@ namespace MusicMazter
             "purchase instrument",
             "check balance",
             "inventory",
-            "my purchases"
+            "my purchases",
+            "exit"
         };
-
-      
 
 
         public void StartVendingMachine(User shopper)
-
         {
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine($"\nWelcome {shopper.Name}");
@@ -46,7 +43,6 @@ namespace MusicMazter
             }
             Console.WriteLine("____________________________");
 
-
             Console.ForegroundColor = ConsoleColor.Green;
 
             string input;
@@ -58,9 +54,8 @@ namespace MusicMazter
 
                 if (input == "purchase instrument")
                 {
-
                     MakePurchase(shopper);
-                 
+                    ShowBalance(shopper);
                 }
                 else if (input == "check balance")
                 {
@@ -74,8 +69,11 @@ namespace MusicMazter
                 {
                     ViewShopperInventory(shopper);
                 }
+                else if (input == "exit")
+                {
+                    break;
+                }
             }
-
             while (input != null);
         }
 
@@ -108,8 +106,6 @@ namespace MusicMazter
             Console.ResetColor();
         }
 
-      
-
         // anpassa inventory när personen köper en vara
         public void AdjustInventory(string choice)
         {
@@ -118,13 +114,10 @@ namespace MusicMazter
                 int newInventory = instrument.Quantity - 1;
                 if (choice == instrument.Name)
                 {
-
                     instrument.Quantity = newInventory;
-
                 }
             }
         }
-
 
         // visa inventory 
         public void DisplayInventory()
@@ -148,14 +141,13 @@ namespace MusicMazter
         // visa inventory för det personen har köpt
         public void ViewShopperInventory(User shopper)
         {
-
             if (shopper.boughtItems.Count == 0)
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
-                Console.WriteLine("You havent bought anything from us yet");
+                Console.WriteLine("You haven't bought anything from us yet.");
 
                 Console.ResetColor();
-                
+
             }
             foreach (var instrument in shopper.boughtItems)
             {
@@ -163,50 +155,40 @@ namespace MusicMazter
                 Console.WriteLine();
                 Console.WriteLine(instrument);
                 Console.WriteLine();
-
             }
         }
 
-      
+
         // göra ett köp i vending-machinen
-        public void MakePurchase(User shopper) {
+        public void MakePurchase(User shopper)
+        {
             Console.ForegroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine();
+            DisplayInventory();
             Console.WriteLine("\nPlease write the name of the instrument you would like to buy.");
 
-            var choice = Console.ReadLine();
+            var choice = Console.ReadLine().ToLower();
 
             Inventory choosenInstrument = null;
             foreach (var instrument in GetInventories)
             {
-
-                if (instrument.Name == choice)
+                if (instrument.Name.ToLower() == choice)
                 {
-
                     choosenInstrument = instrument;
-
-                  
                 }
-               
-
 
                 if (choosenInstrument != null)
                 {
 
                     if (choosenInstrument.Price >= shopper.Balance)
-                       
                     {
-
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine($"Sorry {shopper.Name}, you dont have enough money");
+                        Console.WriteLine($"Sorry {shopper.Name}, you don't have enough money.");
                     }
-                   
-                    if (choosenInstrument.Quantity != 0) { 
 
-
-
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                        Console.WriteLine($"You selected {choice} for {choosenInstrument.Price} dollar");
+                    if (choosenInstrument.Quantity != 0)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.WriteLine($"You've selected {choice} for {choosenInstrument.Price} dollars.");
                         Console.WriteLine("________________________________________");
                         Console.ResetColor();
 
@@ -217,17 +199,10 @@ namespace MusicMazter
 
                         return;
                     }
-
-
                 }
-
-               
-
-
             }
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"Oppsie, we dont hace {choice}");
-
+            Console.WriteLine($"Oppsie, we don't have {choice}");
         }
     }
 }

@@ -13,8 +13,5 @@ namespace MusicMazter
             Price = price;
             Quantity = quantity;
         }
-
     }
-
-
 }
